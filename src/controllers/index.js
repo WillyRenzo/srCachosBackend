@@ -1,3 +1,4 @@
-import ProdutoController from './ProdutoController.js';
+import ProductController from './ProductController.js';
+import ClientController from './ClientController.js';
 
-export { ProdutoController  };
+export { ProductController, ClientController };

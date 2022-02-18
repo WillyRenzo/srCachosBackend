@@ -1,3 +1,4 @@
-import ProdutoRepository from "./ProdutoRepository.js";
+import ProductRepository from "./ProductRepository.js";
+import ClientRepository from "./ClientRepository.js";
 
-export { ProdutoRepository };
+export { ProductRepository, ClientRepository };

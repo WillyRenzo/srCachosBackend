@@ -1,3 +1,4 @@
-import ProdutoService from "./ProdutoService.js";
+import ProductService from "./ProductService.js";
+import ClientService from "./ClientService.js";
 
-export { ProdutoService }
+export { ProductService, ClientService }

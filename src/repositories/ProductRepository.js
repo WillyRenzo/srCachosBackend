@@ -1,7 +1,7 @@
 import { Produto } from '../database/models/index.js';
 import { v4 as uuid } from 'uuid';
 
-class ProdutoRepository {
+class ProductRepository {
 
     async getAllProducts(params) {
         let products = await Produto.findAll();
@@ -78,5 +78,5 @@ class ProdutoRepository {
 
 }
 
-export default new ProdutoRepository();
+export default new ProductRepository();
     

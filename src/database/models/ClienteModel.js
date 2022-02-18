@@ -39,6 +39,8 @@ const Cliente = sequelize.define('Cliente', {
         allowNull: false
     }
 }, {
+    createdAt: false,
+    updatedAt: false,
     tableName: 'tb_cliente'
 });
 

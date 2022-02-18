@@ -1,24 +1,24 @@
-import { ProdutoRepository } from '../repositories/index.js';
+import { ProductRepository } from '../repositories/index.js';
 
-class ProdutoService {
+class ProductService {
     
     async getAllProducts (req) {
-        const result = await ProdutoRepository.getAllProducts();
+        const result = await ProductRepository.getAllProducts();
 
         return result;
     }
 
     async createAProduct (product) {
-        const result = await ProdutoRepository.createAProduct(product);
+        const result = await ProductRepository.createAProduct(product);
 
         return result;
     }
 
     async updateAProduct (productId, product) {
-        const result = await ProdutoRepository.checkIfExists(productId);
+        const result = await ProductRepository.checkIfExists(productId);
 
         if(result) {
-            const result2 = await ProdutoRepository.updateProduct(productId, product);
+            const result2 = await ProductRepository.updateProduct(productId, product);
 
             if (result2) {
                 return { message: 'Product updated successfully'};
@@ -32,10 +32,10 @@ class ProdutoService {
     }
 
     async deleteAProduct (productId) {
-        const result = await ProdutoRepository.checkIfExists(productId);
+        const result = await ProductRepository.checkIfExists(productId);
 
         if(result) {
-            const result2 = await ProdutoRepository.deleteProduct(productId);
+            const result2 = await ProductRepository.deleteProduct(productId);
 
             if (result2) {
                 return { message: 'Product deleted successfully'};
@@ -49,7 +49,7 @@ class ProdutoService {
     }
 
     async getProductById (productId) {
-        const result = await ProdutoRepository.getProductById(productId);
+        const result = await ProductRepository.getProductById(productId);
 
         if(result) {
             return result;
@@ -59,4 +59,4 @@ class ProdutoService {
     }
 }
 
-export default new ProdutoService();
+export default new ProductService();

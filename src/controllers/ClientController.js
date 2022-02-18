@@ -1,48 +1,44 @@
-import { ProdutoService } from '../services/index.js';
+import { ClientService } from '../services/index.js';
 
-class ProdutoController {
+class ClientController {
 
-    constructor() {
-        
-    }
-
-    async getProducts(req, res) {
+    async getClients(req, res) {
         try {
-            const response = await ProdutoService.getAllProducts();
+            const response = await ClientService.getAllClients();
             return res.status(201).json(response);
         } catch (e) {
             return res.status(404).send(e);
         }
     }
     
-    async createProduct(req, res) {
+    async createClient(req, res) {
         try {
             const body = req.body;
 
-            const response = await ProdutoService.createAProduct(body);
+            const response = await ClientService.createAClient(body);
             return res.status(201).json(response);
         } catch (e) {
             return res.status(404).send(e);
         }
     }
     
-    async updateProduct(req, res) {
+    async updateClient(req, res) {
         try {
             const id = req.params.id;
             const body = req.body;
 
-            const response = await ProdutoService.updateAProduct(id, body);
+            const response = await ClientService.updateAClient(id, body);
             return res.status(201).json(response);
         } catch (e) {
             return res.status(404).send(e);
         }
     }
     
-    async deleteProduct(req, res) {
+    async deleteClient(req, res) {
         try {
             const id = req.params.id;
 
-            const response = await ProdutoService.deleteAProduct(id);
+            const response = await ClientService.deleteAClient(id);
             return res.status(201).json(response);
 
         } catch (e) {
@@ -50,11 +46,11 @@ class ProdutoController {
         }
     }
     
-    async getProductById(req, res) {
+    async getClientById(req, res) {
         try {
             const id = req.params.id;
 
-            const response = await ProdutoService.getProductById(id);
+            const response = await ClientService.getClientById(id);
             return res.status(201).json(response);
         } catch (e) {
             return res.status(404).send(e);
@@ -62,4 +58,4 @@ class ProdutoController {
     }
 }
 
-export default new ProdutoController();
+export default new ClientController();
