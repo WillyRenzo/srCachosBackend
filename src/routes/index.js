@@ -1,18 +1,21 @@
-import express from 'express';
+import express from "express";
 
-import routerProduct from './ProductRouter.js';
-import routerClient from './ClientRouter.js'
-import routerEmployee from './EmployeeRouter.js';
-import routerProvider from './ProviderRouter.js';
+import routerProduct from "./ProductRouter.js";
+import routerClient from "./ClientRouter.js";
+import routerEmployee from "./EmployeeRouter.js";
+import routerProvider from "./ProviderRouter.js";
+import routerTask from "./TaskRouter.js";
 
 const router = express.Router();
 
-router.use('/produtos', routerProduct);
+router.use("/produtos", routerProduct);
 
-router.use('/clientes', routerClient);
+router.use("/clientes", routerClient);
 
-router.use('/funcionarios', routerEmployee);
+router.use("/funcionarios", routerEmployee);
 
-router.use('/fornecedores', routerProvider);
+router.use("/fornecedores", routerProvider);
+
+router.use("/servicos", routerTask);
 
 export { router };

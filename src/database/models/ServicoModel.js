@@ -35,6 +35,8 @@ const Servico = sequelize.define('Servico', {
         allowNull: false
     }
 }, {
+    createdAt: false,
+    updatedAt: false,
     tableName: 'tb_servico'
 });
 
