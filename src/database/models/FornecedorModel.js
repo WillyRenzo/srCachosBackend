@@ -6,7 +6,7 @@ const Fornecedor = sequelize.define('Fornecedor', {
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true
     },
-    razaoSocial: {
+    razaosocial: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -22,11 +22,11 @@ const Fornecedor = sequelize.define('Fornecedor', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    inscricaoEstadual: {
+    inscricaoestadual: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    inscricaoMunicipal: {
+    inscricaomunicipal: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -35,6 +35,8 @@ const Fornecedor = sequelize.define('Fornecedor', {
         allowNull: false
     }
 }, {
+    createdAt: false,
+    updatedAt: false,
     tableName: 'tb_fornecedor'
 });
 

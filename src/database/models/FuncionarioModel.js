@@ -39,6 +39,8 @@ const Funcionario = sequelize.define('Funcionario', {
         allowNull: false
     }
 }, {
+    createdAt: false,
+    updatedAt: false,
     tableName: 'tb_funcionario'
 });
 
