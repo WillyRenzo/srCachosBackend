@@ -7,6 +7,10 @@ const FuncionarioHabilidade = sequelize.define('FuncionarioHabilidade', {
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true
     },
+    cod_funcionario: {
+        type: DataTypes.UUID,
+        references: { model: 'Funcionario', key: 'id'}
+    },
     habilidade: {
         type: DataTypes.STRING,
         allowNull: false
@@ -16,8 +20,5 @@ const FuncionarioHabilidade = sequelize.define('FuncionarioHabilidade', {
     updatedAt: false,
     tableName: 'tb_funcionario_habilidade'
 });
-
-Funcionario.hasMany(FuncionarioHabilidade);
-FuncionarioHabilidade.belongsTo(Funcionario);
 
 export { FuncionarioHabilidade };

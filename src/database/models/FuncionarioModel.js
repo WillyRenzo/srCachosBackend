@@ -1,4 +1,5 @@
 import { sequelize, DataTypes } from '../index.js';
+import { FuncionarioHabilidade } from './index.js';
 
 const Funcionario = sequelize.define('Funcionario', {
     id: {
